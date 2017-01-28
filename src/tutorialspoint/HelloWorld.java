@@ -2,6 +2,7 @@ package tutorialspoint;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 
 /**
  * Created by sredxny on 28-01-2017.
