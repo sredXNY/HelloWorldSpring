@@ -8,17 +8,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class MainApp {
     public static void main(String[] args){
-        AbstractApplicationContext context=new ClassPathXmlApplicationContext("Beans.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 
-        HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
+        TextEditor te = (TextEditor) context.getBean("textEditor");
 
-        objA.getMessage1();
-        objA.getMessage2();
-
-        HelloIndia objB = (HelloIndia) context.getBean("helloIndia");
-        objB.getMessage1();
-        objB.getMessage2();
-        objB.getMessage3();
-        context.registerShutdownHook();
+        te.spellCheck();
     }
 }
