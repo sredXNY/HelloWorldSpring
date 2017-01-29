@@ -1,5 +1,6 @@
 package tutorialspoint;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,14 +9,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class MainApp {
     public static void main(String[] args){
-        ApplicationContext context =
+        ConfigurableApplicationContext context =
                 new ClassPathXmlApplicationContext("Beans.xml");
 
-        JavaCollection jc=(JavaCollection)context.getBean("javaCollection");
+        // Let us raise a start event.
+        context.start();
 
-        jc.getAddressList();
-        jc.getAddressSet();
-        jc.getAddressMap();
-        jc.getAddressProp();
+        HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
+
+        obj.getMessage();
+
+        // Let us raise a stop event.
+        context.stop();
     }
 }
