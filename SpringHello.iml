@@ -34,5 +34,18 @@
         <jarDirectory url="file://C:/spring-framework-4.3.6.RELEASE/libs" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://C:/spring-framework-4.3.6.RELEASE/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://C:/spring-framework-4.3.6.RELEASE/libs" />
+        </SOURCES>
+        <jarDirectory url="file://C:/spring-framework-4.3.6.RELEASE/libs" recursive="false" />
+        <jarDirectory url="file://C:/spring-framework-4.3.6.RELEASE/libs" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>
