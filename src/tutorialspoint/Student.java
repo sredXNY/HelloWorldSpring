@@ -22,7 +22,6 @@ public class Student {
         System.out.println("Name : " + name );
         return name;
     }
-
     public void printThrowException(){
         System.out.println("Exception raised");
         throw new IllegalArgumentException();
